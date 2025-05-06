@@ -17,7 +17,7 @@
   id: 2,
   title: "Die Tonnenshow",
   video: "/videos/scene2_tonnenshow.mp4",
-  trudeSpeech: "Wer falsch trennt, wird aussortiert – und gehört ab jetzt zu den Idioten. ...oder gib jetzt gut Acht!",
+  trudeSpeech: "Wer falsch trennt, wird aussortiert – und gehört ab sofort nicht mehr zu uns Kühlen. ...oder gib jetzt gut Acht!",
   knowledge: "Blaue Tonne: Papier. Gelb: Verpackungen. Braun: Bioabfall. Grau: der traurige Rest. Wer richtig trennt, spart Rohstoffe und Nerven.",
   action: "Male oder bastle deine eigene Mülltonnenfamilie – mit Gesichtern! Chipstüten-Haare, Apfelaugen, Klopapier-Hüte – alles erlaubt. Jury: oekomobil@rpt.bwl.de  ",
   quiz: {
@@ -34,5 +34,29 @@
       correct: 1
     }
   },
-  funfact: "Trude hat mal eine Klobürste im Gelben Sack gefunden. Die war zwar gelb – aber trotzdem: Pfui!"
+  funfact: "Trude hat mal eine Klobürste im Gelben Sack gefunden. Die gehört zu gelb obwohl sie braun war!"
+}
+
+{
+  id: 3,
+  title: "Was bleibt zu lange?",
+  video: "/videos/scene3_plastikzeitreise.mp4",
+  trudeSpeech: "Manche Sachen leben länger als ich. Und das heißt was! Schließlich war ich schon Müllberaterin bei den Pharaonen.",
+  knowledge: "Eine Plastikflasche bleibt 450 Jahre. Ein Kaugummi 500. Alufolie: mindestens 200. Und Glas? Unendlich – wenn niemand recycelt.",
+  action: "Bastle eine Zeitmaschine aus Müll! Verpackung = Cockpit, Uhr aus Milchkarton, Bonbonpapier als Zeitanzeige.",
+  quiz: {
+    question: "Was verrottet am langsamsten?",
+    options: ["Bananenschale", "PET-Flasche", "Papiertüte"],
+    correct: 1,
+    expert: {
+      question: "Warum ist „kompostierbares Plastik“ trotzdem oft ein Problem?",
+      options: [
+        "Es ist nur unter Laborbedingungen abbaubar",
+        "Es riecht voll eklig",
+        "Es fliegt beim kleinsten Windstoß davon"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
 }
