@@ -160,3 +160,83 @@
   },
   funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch."
 }
+
+{
+  id: 8,
+  title: "Kompost ist kein Komplott",
+  video: "/videos/scene8_kompost_zauber.mp4",
+  trudeSpeech: "Kompost ist Magie – aus Matsch wird Morgen.",
+  knowledge: "Bioabfall wird zu Humus, wenn er sauber bleibt: kein Plastik, kein Metall, kein Glas! Kompostieren spart CO₂, verbessert Böden und stinkt nur, wenn man's falsch macht.",
+  action: "Starte dein eigenes Kompost-Experiment: Zwei Gläser mit Erde – eines mit Apfelrest, eines mit Kaugummi. Zwei Wochen warten – was bleibt übrig?",
+  quiz: {
+    question: "Was gehört NICHT in die Biotonne?",
+    options: ["Kaffeefilter", "Bananenschale", "Teelöffel"],
+    correct: 2,
+    expert: {
+      question: "Warum ist kompostierbare Folie oft trotzdem ein Problem?",
+      options: [
+        "Ihre langsame Verwitterung lohnt industrielle Kompostierung nicht",
+        "Sie führt Regenwürmer in die Irre",
+        "Sie ist viel zu teuer"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis."
+}
+
+{
+  id: 9,
+  title: "Verpackt und zugenäht",
+  video: "/videos/scene9_verpackungswahnsinn.mp4",
+  trudeSpeech: "Ich hab mal eine eingeschweißte Banane gesehen. Ich schwöre, sie war schon geschält.",
+  knowledge: "Verpackungen schützen – klar. Aber oft sind sie überflüssig: Plastik um Gurken, Blister um Schrauben, Styropor in Kisten voller Luft. Jedes Jahr entstehen Millionen Tonnen Verpackungsmüll allein in Deutschland.",
+  action: "Mach eine Verpackungs-Stadtsafari: Fotografiere unterwegs fünf überflüssige Verpackungen. Bonuspunkt für die lächerlichste Verpackung!",
+  quiz: {
+    question: "Was rechnest du zu unnötiger Verpackung?",
+    options: [
+      "Einen Apfel eingewickelten Apfel",
+      "Ein Pfandglas mit fauligen Algen drin",
+      "Papier um Butter"
+    ],
+    correct: 0,
+    expert: {
+      question: "Warum ist Styropor besonders problematisch?",
+      options: [
+        "Es zerbröselt zu Mikroplastik",
+        "Es ist zu weich für Maschinen",
+        "Es riecht weiß und neutral"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
+}
+
+{
+  id: 10,
+  title: "Müll auf Weltreise",
+  video: "/videos/scene10_muellexport.mp4",
+  trudeSpeech: "Ich hab meinen alten Toaster auf einer Deponie in Ghana wiedergefunden. Er hat mich nicht erkannt.",
+  knowledge: "Deutschland exportiert enorme Mengen an Müll. Viel davon landet in Ländern, die gar nicht damit umgehen können. Plastik wird dort verbrannt, vergraben oder landet im Meer. Aus den Augen – in andere Leben.",
+  action: "Markiere auf einer Weltkarte die Stationen: Du → Mülltonne → Hafen → Asien oder Afrika. Finde heraus, wo dein Elektroschrott landet.",
+  quiz: {
+    question: "Warum wird Müll ins Ausland gebracht?",
+    options: [
+      "Weil dort mehr Platz ist",
+      "Weil die Entsorgung billiger ist",
+      "Weil Trude gern verreist"
+    ],
+    correct: 1,
+    expert: {
+      question: "Welches Risiko besteht beim Export von Elektroschrott?",
+      options: [
+        "Vergiftung von Menschen und Umwelt",
+        "Verlust von WLAN",
+        "Überhäufung von alten Geräten"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
+}
