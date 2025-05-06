@@ -240,3 +240,27 @@
   },
   funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
 }
+
+{
+  id: 11,
+  title: "Mir wird heiß",
+  video: "/videos/scene11_klimamuell.mp4",
+  trudeSpeech: "Müll wird verbrannt. Die Erde auch. Aber hey – Hauptsache warm im Winter!",
+  knowledge: "Müll trägt massiv zur Klimakrise bei: Verbrennung erzeugt CO₂, schlecht sortierter Biomüll Methan. Auch Herstellung und Transport von Verpackungen verursachen Emissionen. Müll ist ein Klimatreiber im Tarnanzug.",
+  action: "Gestalte deinen persönlichen CO₂-Kühlschrank: Zeichne oder bastle, was du tust, um die Erde kühl zu halten – z. B. Mehrwegflasche, reparierte Jeans oder kein Liefersushi in Styropor.",
+  quiz: {
+    question: "Welche Müllart ist besonders klimaschädlich?",
+    options: ["Papiermüll", "Biomüll im Restmüll", "Alte Socken"],
+    correct: 1,
+    expert: {
+      question: "Warum wird Müllverbrennung oft als klimafreundlich dargestellt?",
+      options: [
+        "Weil sie Strom und Wärme liefert",
+        "Weil sie Blumen schneller wachsen lässt",
+        "Weil das CO₂ rosa eingefärbt wird"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
+}
