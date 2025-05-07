@@ -264,3 +264,257 @@
   },
   funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
 }
+
+{
+  id: 12,
+  title: "Wer macht den Dreck?",
+  video: "/videos/scene12_verursacher.mp4",
+  trudeSpeech: "Ich schmeiß nix weg. Ich zeig nur mit dem Schnabel drauf, wer’s tut.",
+  knowledge: "Müll entsteht nicht einfach – er wird gemacht. Von Firmen, die alles verpacken. Von Werbung, die uns Dinge aufschwatzt. Von einem System, das Wegwerfen belohnt. Aber ändern können wir’s trotzdem. Stück für Stück.",
+  action: "Starte ein Markensuchspiel: Welche Firma produziert am meisten Müll in deinem Alltag? Mach ein Foto pro Logo – und schick Trude deinen Top-Drecksack!",
+  quiz: {
+    question: "Wer ist hauptverantwortlich für den Verpackungsmüll?",
+    options: [
+      "Die Verbraucher",
+      "Die Hersteller",
+      "Die Müllabfuhr"
+    ],
+    correct: 1,
+    expert: {
+      question: "Was versteht man unter Produzentenverantwortung?",
+      options: [
+        "Dass Hersteller ihren Müll zurücknehmen und entsorgen müssen",
+        "Dass der Produzent Müll umdeklarieren kann als Hygenie",
+        "Dass Werbung für Smartphones verboten wird"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen."
+}
+
+{
+  id: 13,
+  title: "Die Müllindustrie",
+  video: "/videos/scene13_muellbusiness.mp4",
+  trudeSpeech: "Ich hab nichts gegen Müll. Ich hab was gegen Leute, die damit reich werden.",
+  knowledge: "Müll ist ein Geschäft. Von der Tonne über die Sortieranlage bis zur Verbrennung: Firmen verdienen an jeder Station. Manche sogar daran, dass nichts recycelt wird – weil’s teurer wäre. Deshalb: Müll vermeiden ist revolutionär.",
+  action: "Zeichne Trudes Müllkreislauf der Geldströme: Wer kassiert wo, und warum? (Spoiler: Die Antwort ist selten 'Niemand'.)",
+  quiz: {
+    question: "Woran verdient die Müllindustrie?",
+    options: [
+      "An der Wiederverwendung",
+      "Am Wegwerfen und Verbrennen",
+      "An der Dummheit der Verbraucher"
+    ],
+    correct: 1,
+    expert: {
+      question: "Warum wird echter Recycling-Erfolg manchmal verhindert?",
+      options: [
+        "Weil Verbrennen billiger ist",
+        "Weil es nicht genug Recyclinganlagen gibt",
+        "Weil Trude zu wenig sortiert"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken."
+}
+
+{
+  id: 14,
+  title: "Tierisch Müll!",
+  video: "/videos/scene14_tiere_und_muell.mp4",
+  trudeSpeech: "Ein Fisch mit Strohhalm in der Nase ist kein Cocktail. Es ist eine Katastrophe.",
+  knowledge: "Viele Tiere verwechseln Plastik mit Futter. Vögel bauen Nester aus Müll. Robben verheddern sich in Netzen. Auch bei uns zuhause fressen Hunde Plastik oder Vögel Schnüre. Müll macht krank und ist tödlich.",
+  action: "Bastle ein Tierporträt aus Müll – mit einer Botschaft. Beispiel: Ein Fisch aus Bonbonpapier mit dem Titel 'Ich schmeck nach Plastik'.",
+  quiz: {
+    question: "Was passiert, wenn Tiere Plastik fressen?",
+    options: [
+      "Sie verdauen es wie Gras",
+      "Sie schwimmen mit dem Bauch nach oben",
+      "Sie glitzern im Dunkeln"
+    ],
+    correct: 1,
+    expert: {
+      question: "Warum finden Tiere Plastik so anziehend?",
+      options: [
+        "Es sieht aus wie Futter",
+        "Es riecht nach Menschen",
+        "Es schwimmt besser"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
+}
+
+{
+  id: 15,
+  title: "Kauf nix! Oder fast nix…",
+  video: "/videos/scene15_konsumkritik.mp4",
+  trudeSpeech: "Ich kaufe nur noch Sachen, die ich essen, anziehen oder lieben kann. Manchmal trifft alles auf eine Möhre zu.",
+  knowledge: "Müll entsteht oft schon beim Kaufen: Verpackungen, kurzlebige Produkte, Spontankäufe. Wer weniger kauft, wirft weniger weg. Flohmärkte, Second-Hand, Leihen, Tauschen und Reparieren sind Müllvermeidung deluxe.",
+  action: "Führe eine Woche lang Trudes 'Fast nix kaufen'-Tagebuch. Notiere: Was wolltest du kaufen? Was hast du nicht gekauft – und warum?",
+  quiz: {
+    question: "Was hilft, um Müll beim Einkaufen zu vermeiden?",
+    options: [
+      "Immer einen Einkaufswagen nehmen",
+      "Spontan kaufen, was gut aussieht",
+      "Mit Einkaufsliste und Beutel losziehen"
+    ],
+    correct: 2,
+    expert: {
+      question: "Was ist ein Repair Café?",
+      options: [
+        "Ein Ort, an dem man Dinge selbst oder gemeinsam repariert",
+        "Ein Café mit recyceltem Geschirr",
+        "Ein Ort, an dem Trude ihre schlechte Laune flicken lässt"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
+}
+
+{
+  id: 16,
+  title: "Trudes Top-5 Weltrettungstricks",
+  video: "/videos/scene16_weltrettung.mp4",
+  trudeSpeech: "Ich bin nicht perfekt. Aber ich bin besser als ein Plastiklöffel im Kompost.",
+  knowledge: "Welt retten klingt groß. Aber es fängt klein an. Trudes Tricks: 1. Immer Mehrweg. 2. Kaufen, was du brauchst, nicht mehr. 3. Reste lieben. 4. Reparieren statt wegwerfen. 5. Müll sammeln, auch wenn’s nicht deiner ist.",
+  action: "Druck dir Trudes 5 Tricks aus – oder male deine eigenen. Häng sie an die Zimmertür, damit du’s nicht vergisst (und damit deine Familie’s auch sieht).",
+  quiz: {
+    question: "Was ist KEIN sinnvoller Weltrettungstrick?",
+    options: [
+      "Mehrweg statt Einweg",
+      "Aus Müll mach Müll",
+      "Reparieren statt wegwerfen"
+    ],
+    correct: 1,
+    expert: {
+      question: "Warum ist 'Zero Waste' mehr als ein Trend?",
+      options: [
+        "Weil es unser Denken über Konsum verändert",
+        "Weil Trude es erfunden hat",
+        "Weil dann alle nichts haben"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
+}
+
+{
+  id: 17,
+  title: "Was kannst DU tun?",
+  video: "/videos/scene17_du_tust.mp4",
+  trudeSpeech: "Ich bin nur ein kugeliges Federvieh. Aber selbst ich kann was tun. Und du kannst mehr.",
+  knowledge: "Jede:r kann anfangen: Müll trennen, weniger kaufen, aufräumen helfen, reparieren, andere nerven (nett). Wichtig: Du musst nicht alles perfekt machen. Aber anfangen ist Pflicht.",
+  action: "Mach Trudes Heldencheck: Was hast du heute getan, was der Welt hilft? Schreib’s auf. Teile es. Oder flüster es dem Kompost. Hauptsache, du merkst’s dir.",
+  quiz: {
+    question: "Was ist ein sinnvoller erster Schritt für weniger Müll?",
+    options: [
+      "Alles wegschmeißen und neu kaufen",
+      "Mit Freunden eine Sammelaktion starten",
+      "Nix mehr essen"
+    ],
+    correct: 1,
+    expert: {
+      question: "Was meint 'systemischer Wandel' beim Thema Müll?",
+      options: [
+        "Veränderung bei Politik, Wirtschaft und Gesellschaft",
+        "Trudes Laune ändern",
+        "Nur Bio-Müll zulassen"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
+}
+
+{
+  id: 18,
+  title: "Trudes Müll-Quiz-Show",
+  video: "/videos/scene18_quizshow.mp4",
+  trudeSpeech: "Willkommen zur Show, bei der Müll dein Gehirn düngt!",
+  knowledge: "Hier wird dein Wissen getestet – und dein Humor gleich mit. Trude fragt, du antwortest. Richtige Lösungen bringen Punkte, falsche bringen Gelächter. Und ein Zertifikat gibt’s auch… vielleicht.",
+  action: "Schnapp dir Zettel und Stift (oder dein Hirn) und mach mit bei Trudes 7-Fakten-Feuerwerk. Zähle deine Punkte – und hol dir dein Müllionärs-Zertifikat!",
+  quiz: {
+    question: "Wie viele Jahre braucht eine Plastikflasche, um zu verrotten?",
+    options: [
+      "20",
+      "450",
+      "Unendlich",
+      "Kommt drauf an, ob Trude drauf sitzt"
+    ],
+    correct: 1,
+    expert: {
+      question: "Was ist die effektivste Müllvermeidungsstrategie?",
+      options: [
+        "Vermeidung vor Verwertung",
+        "Recycling",
+        "Trude heiraten",
+        "Kompostieren"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
+}
+
+{
+  id: 19,
+  title: "Sabine erscheint",
+  video: "/videos/scene19_sabine.mp4",
+  trudeSpeech: "Achtung, jetzt wird’s sentimental. Aber mit Stil. Und nur noch ein bisschen Müll.",
+  knowledge: "Sabine hat Geburtstag. Und sie bekommt kein Buch, sondern das ganze eBook – inklusive Trude. Denn wer sich um die Welt kümmert, verdient mehr als nur Glückwünsche.",
+  action: "Gestalte deine eigene letzte Seite für Sabine: mit Dank, Witz, Zeichnung oder Müllkunst. Trude hilft dir gern beim Reimen oder Recyceln.",
+  quiz: {
+    question: "Was ist das beste Geschenk für einen umweltbewussten Menschen?",
+    options: [
+      "Ein Plastikblumenstrauß",
+      "Ein eBook mit Trude",
+      "Ein Gutschein für Fastfood"
+    ],
+    correct: 1,
+    expert: {
+      question: "Was zählt mehr als ein Geschenk?",
+      options: [
+        "Aufmerksamkeit und echtes Interesse",
+        "Preisetiketten mit Haltbarkeitsdatum",
+        "Hinterher aufräumen"
+      ],
+      correct: 0
+    }
+  },
+  funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
+}
+
+{
+  id: 20,
+  title: "Trude winkt",
+  video: "/videos/scene20_abschied.mp4",
+  trudeSpeech: "Das war’s von mir. Ich bleib euch erhalten – irgendwo zwischen Apfelschale und Altpapier.",
+  knowledge: "Das Ökomobil zieht weiter. Doch Trudes Botschaft bleibt: Müll ist ein Zivilisationsschaden. Wer aufpasst, verändert was. Wer lacht, merkt’s sich besser.",
+  action: "Male dein eigenes Ökomobil – mit allem, was du brauchst, um die Welt ein bisschen aufzuräumen. Trude darf natürlich nicht fehlen!",
+  quiz: {
+    question: "Was bleibt, wenn Trude weiterfährt?",
+    options: [
+      "Ein Haufen Müll",
+      "Ein leerer Parkplatz",
+      "Eine Idee in meinem Kopf"
+    ],
+    correct: 2,
+    expert: {
+      question: "Was ist die wichtigste Erkenntnis aus Trudes Tour?",
+      options: [
+        "Dass Müll stinkt",
+        "Dass jede und jeder was tun kann",
+        "Dass Federviecher reden können"
+      ],
+      correct: 1
+    }
+  },
+  funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
+}
