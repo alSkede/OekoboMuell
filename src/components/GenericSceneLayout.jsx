@@ -1,4 +1,5 @@
 import TrudeTV from "./TrudeTV";
+import TrudeSpeechButton from "./TrudeSpeechButton";
 
 export default function GenericSceneLayout({ scene }) {
   return (
@@ -21,7 +22,10 @@ export default function GenericSceneLayout({ scene }) {
         {/* Rechte Seite: Inhalte */}
         <div className="flex flex-col md:w-1/2 gap-4">
           <div className="bg-white border-l-4 border-rose-400 p-4 rounded">
-            <p className="italic">🗯️ {scene.trudeSpeech}</p>
+            <div>
+                <p className="italic">🗯️ {scene.trudeSpeech}</p>
+                <TrudeSpeechButton text={scene.trudeSpeech} />
+            </div>
           </div>
 
           <div className="bg-green-100 p-4 rounded">
