@@ -1,32 +1,47 @@
 import { useState } from "react";
 import lessons from "../data/lessons";
-import Scene2 from "./scenes/Scene2";
-import Scene3 from "./scenes/Scene3";
-// später: import Scene4, Scene5, usw...
+import TrudeTV from "./TrudeTV";
+import SceneComponents from "./scenes";
 
 export default function SceneViewer() {
-  const [sceneId, setSceneId] = useState(2); // Start bei Szene 2
+  const [sceneIndex, setSceneIndex] = useState(0);
+  const scene = lessons[sceneIndex];
+  const SceneComponent = SceneComponents[`Scene${scene.id}`];
 
-  const goPrev = () => setSceneId(id => Math.max(2, id - 1));
-  const goNext = () => setSceneId(id => Math.min(20, id + 1));
+  const handleNext = () => {
+    if (sceneIndex < lessons.length - 1) setSceneIndex(sceneIndex + 1);
+  };
 
-  const renderScene = () => {
-    switch (sceneId) {
-      case 2: return <Scene2 />;
-      case 3: return <Scene3 />;
-      // case 4: return <Scene4 />;
-      default: return <p className="text-center p-10">Szene {sceneId} kommt bald!</p>;
-    }
+  const handlePrev = () => {
+    if (sceneIndex > 0) setSceneIndex(sceneIndex - 1);
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-amber-50 px-6 py-8">
-      <div className="flex justify-between w-full max-w-4xl mb-4">
-        <button onClick={goPrev} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">←</button>
-        <span className="text-lg font-bold">Szene {sceneId}</span>
-        <button onClick={goNext} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">→</button>
+    <div className="flex flex-col items-center px-4 py-6">
+      <h1 className="text-4xl font-bold text-center mb-4 text-green-800">
+        {scene.title}
+      </h1>
+
+      <div className="flex gap-4 mb-6">
+        <button
+          onClick={handlePrev}
+          disabled={sceneIndex === 0}
+          className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded disabled:opacity-50"
+        >
+          ⬅️ Zurück
+        </button>
+        <button
+          onClick={handleNext}
+          disabled={sceneIndex === lessons.length - 1}
+          className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded disabled:opacity-50"
+        >
+          Weiter ➡️
+        </button>
       </div>
-      {renderScene()}
+
+      <div className="w-full max-w-5xl">
+        <SceneComponent />
+      </div>
     </div>
   );
 }
