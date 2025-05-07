@@ -1,5 +1,5 @@
 import { useQuiz } from "../QuizContext";
-import html2pdf from "html2pdf.js";
+window.html2pdf().set({...}).from(element).save();
 
 export default function CertificatePage() {
   const { getScore } = useQuiz();
