@@ -1,5 +1,6 @@
+
 import { useQuiz } from "../QuizContext";
-window.html2pdf().set({...}).from(element).save();
+import { useEffect } from "react";
 
 export default function CertificatePage() {
   const { getScore } = useQuiz();
@@ -8,7 +9,7 @@ export default function CertificatePage() {
 
   const downloadPDF = () => {
     const element = document.getElementById("certificate");
-    html2pdf().set({
+    window.html2pdf().set({
       margin: 0.5,
       filename: `Müllionärin-Zertifikat.pdf`,
       image: { type: "jpeg", quality: 0.98 },
@@ -16,6 +17,23 @@ export default function CertificatePage() {
       jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
     }).from(element).save();
   };
+
+  const fireConfetti = () => {
+    const confetti = window.confetti;
+    if (confetti) {
+      confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 },
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (score >= 15) {
+      fireConfetti();
+    }
+  }, [score]);
 
   return (
     <div className="flex flex-col items-center">
@@ -33,12 +51,20 @@ export default function CertificatePage() {
         </div>
       </div>
 
-      <button
-        onClick={downloadPDF}
-        className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-      >
-        📥 PDF herunterladen
-      </button>
+      <div className="mt-4 flex gap-4">
+        <button
+          onClick={downloadPDF}
+          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+        >
+          📥 PDF herunterladen
+        </button>
+        <button
+          onClick={fireConfetti}
+          className="px-3 py-2 bg-pink-600 text-white rounded hover:bg-pink-700"
+        >
+          🎉 Nochmal Konfetti!
+        </button>
+      </div>
     </div>
   );
 }
