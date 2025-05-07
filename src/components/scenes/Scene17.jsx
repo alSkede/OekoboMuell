@@ -2,8 +2,8 @@ import { useState } from "react";
 import TrudeTV from "../TrudeTV";
 import lessons from "../../data/lessons";
 
-export default function Scene17() {
-  const scene = lessons.find(s => s.id === 17);
+export default function Scene18() {
+  const scene = lessons.find(s => s.id === 18);
   const [showQuiz, setShowQuiz] = useState(false);
 
   return (
