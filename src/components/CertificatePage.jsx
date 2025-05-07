@@ -12,12 +12,16 @@ export default function CertificatePage() {
 
       <h2 className="text-2xl font-semibold">Du bist ein*e Müllionär*in!</h2>
 
-      <p className="text-lg mt-2">Mit {score} von 20 Punkten im Trude-Quiz</p>
+      <p className="text-lg mt-2">Mit {score} von 20 Punkten im Trude Kühl-Quiz</p>
       <p className="italic">– bestanden am {date} –</p>
 
       <div className="mt-6">
-        <img src="/img/trude_siegel.png" alt="Trude-Siegel" className="h-24 mx-auto" />
-        <p className="text-sm mt-2">Trude Kühl, Müllberaterin a.D.</p>
+        <img
+          src="/img/trude_siegel.png"
+          alt="Trude-Siegel"
+          className="h-32 mx-auto drop-shadow-lg"
+        />
+        <p className="text-sm mt-2 italic">Zertifiziert von Trude Kühl, Müllberaterin a.D.</p>
       </div>
     </div>
   );
