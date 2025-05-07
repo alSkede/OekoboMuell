@@ -1,5 +1,6 @@
 import TrudeTV from "./TrudeTV";
 import TrudeSpeechButton from "../TrudeSpeechButton";
+import SceneQuiz from "./SceneQuiz";
 
 export default function GenericSceneLayout({ scene }) {
   return (
@@ -36,19 +37,7 @@ export default function GenericSceneLayout({ scene }) {
             <p><strong>Mitmachaktion:</strong> {scene.action}</p>
           </div>
 
-          {scene.quiz && (
-            <div className="bg-yellow-100 p-4 rounded">
-              <p><strong>Quizfrage:</strong> {scene.quiz.question}</p>
-              <ul className="list-disc list-inside">
-                {scene.quiz.options.map((opt, i) => (
-                  <li key={i}>{opt}</li>
-                ))}
-              </ul>
-              <p className="mt-2 text-green-700">
-                ✅ Richtige Antwort: {scene.quiz.options[scene.quiz.correct]}
-              </p>
-            </div>
-          )}
+          {scene.quiz && <SceneQuiz scene={scene} />}
 
           {scene.quiz?.expert && (
             <div className="bg-yellow-50 p-4 rounded text-sm">
