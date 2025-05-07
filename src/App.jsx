@@ -1,3 +1,11 @@
+import SceneViewer from "./components/SceneViewer";
+
+function App() {
+  return <SceneViewer />;
+}
+
+export default App;
+
 import Scene2 from "./components/scenes/Scene2";
 
 function App() {
