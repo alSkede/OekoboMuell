@@ -1,20 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TrudeTV({ videoPath }) {
-  const [showVideo, setShowVideo] = useState(false);
+  const [videoExists, setVideoExists] = useState(false);
+
+  useEffect(() => {
+    if (!videoPath) return;
+    fetch(videoPath, { method: "HEAD" })
+      .then((res) => setVideoExists(res.ok))
+      .catch(() => setVideoExists(false));
+  }, [videoPath]);
 
   return (
-    <div className="relative w-48 cursor-pointer" onClick={() => setShowVideo(true)}>
-      <img src="/img/trudes_tv.png" alt="Trudes Fernseher" className="w-full" />
-      {showVideo && (
-        <div className="absolute inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
-          <div className="relative w-[90%] max-w-xl">
-            <video controls autoPlay src={videoPath} className="w-full rounded-lg" />
-            <button
-              onClick={(e) => { e.stopPropagation(); setShowVideo(false); }}
-              className="absolute top-2 right-2 text-white text-xl font-bold"
-            >✕</button>
-          </div>
+    <div className="relative w-64 h-40 border-4 border-black bg-black rounded shadow-inner">
+      {videoExists ? (
+        <video
+          src={videoPath}
+          controls
+          className="w-full h-full object-cover rounded"
+          preload="metadata"
+        />
+      ) : (
+        <div className="flex items-center justify-center w-full h-full text-white text-center px-4">
+          🎬 Kein Video verfügbar
         </div>
       )}
     </div>
