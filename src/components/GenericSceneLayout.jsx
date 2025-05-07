@@ -1,5 +1,5 @@
 import TrudeTV from "./TrudeTV";
-import TrudeSpeechButton from "./TrudeSpeechButton";
+import TrudeSpeechButton from "../TrudeSpeechButton";
 
 export default function GenericSceneLayout({ scene }) {
   return (
