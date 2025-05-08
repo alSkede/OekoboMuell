@@ -1,4 +1,5 @@
 import TrudeTV from "./TrudeTV";
+import { useEffect, useRef } from "react";
 import TrudeSpeechButton from "../TrudeSpeechButton";
 import SceneQuiz from "./SceneQuiz";
 
@@ -19,6 +20,23 @@ export default function GenericSceneLayout({ scene }) {
           />
           <TrudeTV videoPath={scene.video} />
         </div>
+        
+        const audioRef = useRef(null);
+
+         useEffect(() => {
+           if (audioRef.current) {
+             audioRef.current.play().catch(() => {
+               // Autoplay verhindert (z. B. durch Browser): ignorieren
+              });
+            }
+         }, [scene.id]);  // Spielt nur beim Szenenwechsel ab
+
+        <audio
+          ref={audioRef}
+          src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
+          className="hidden"
+          autoPlay
+        />
 
         {/* Rechte Seite: Inhalte */}
         <div className="flex flex-col md:w-1/2 gap-4">
