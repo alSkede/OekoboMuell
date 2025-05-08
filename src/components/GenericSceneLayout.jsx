@@ -28,6 +28,15 @@ export default function GenericSceneLayout({ scene }) {
                 <TrudeSpeechButton text={scene.trudeSpeech} />
             </div>
           </div>
+          
+          <div>
+            <p className="italic">🗯️ {scene.trudeSpeech}</p>
+            <audio
+              controls
+              src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
+              className="mt-2"
+            />
+          </div>
 
           <div className="bg-green-100 p-4 rounded">
             <p><strong>Wissenshäppchen:</strong> {scene.knowledge}</p>
