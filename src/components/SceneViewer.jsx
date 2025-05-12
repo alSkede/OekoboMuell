@@ -1,65 +1,38 @@
-import { useState } from "react";
-import lessons from "../data/lessons";
-import SceneComponents from "./scenes";
+return (
+  <div className="min-h-screen flex flex-col bg-neutral-100 text-gray-800">
+    <header className="p-4 text-center text-3xl font-bold bg-green-800 text-white shadow-md">
+      {scene.title}
+    </header>
 
-export default function SceneViewer() {
-  const [sceneIndex, setSceneIndex] = useState(0);
-  const scene = lessons[sceneIndex];
-  const SceneComponent = SceneComponents[`Scene${scene.id}`];
-
-  const handleKeyDown = (e) => {
-    if (e.key === "ArrowRight" && sceneIndex < lessons.length - 1) {
-      setSceneIndex(sceneIndex + 1);
-    } else if (e.key === "ArrowLeft" && sceneIndex > 0) {
-      setSceneIndex(sceneIndex - 1);
-    }
-  };
-
-  return (
-    <div
-      className="flex flex-col items-center px-4 py-6"
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-    >
-      <h1 className="text-4xl font-bold text-center mb-4 text-green-800">
-        {scene.title}
-      </h1>
-
-      {/* Navigation Buttons */}
-      <div className="flex gap-4 mb-6 flex-wrap justify-center">
-        <button
-          onClick={() => setSceneIndex((i) => Math.max(i - 1, 0))}
-          disabled={sceneIndex === 0}
-          className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded disabled:opacity-50"
-        >
-          ⬅️ Zurück
-        </button>
-
-        <select
-          value={sceneIndex}
-          onChange={(e) => setSceneIndex(parseInt(e.target.value))}
-          className="border border-gray-400 px-3 py-2 rounded"
-        >
-          {lessons.map((s, idx) => (
-            <option key={s.id} value={idx}>
-              {s.id}. {s.title}
-            </option>
-          ))}
-        </select>
-
-        <button
-          onClick={() => setSceneIndex((i) => Math.min(i + 1, lessons.length - 1))}
-          disabled={sceneIndex === lessons.length - 1}
-          className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded disabled:opacity-50"
-        >
-          Weiter ➡️
-        </button>
+    <main className="flex-grow grid grid-cols-2 gap-4 p-6">
+      {/* Linke Seite: Bild / Video */}
+      <div className="flex flex-col items-center justify-center bg-white shadow rounded p-4">
+        <p className="text-xl font-semibold mb-4">Visual (Bild oder Video)</p>
+        {/* Hier kommt später das TrudeTV-Video rein */}
+        <div className="w-full h-[60vh] bg-gray-200 rounded flex items-center justify-center">
+          <span className="text-gray-500">[Video/Bild Platzhalter]</span>
+        </div>
       </div>
 
-      {/* Aktuelle Szene */}
-      <div className="w-full max-w-5xl">
-        <SceneComponent />
+      {/* Rechte Seite: Inhalt */}
+      <div className="flex flex-col gap-4 bg-white shadow rounded p-6">
+        <p><strong>🗯️ Trude sagt:</strong> {scene.trudeSpeech}</p>
+        <p><strong>📚 Wissen:</strong> {scene.knowledge}</p>
+        <p><strong>✋ Mitmachaktion:</strong> {scene.action}</p>
+        <p className="italic">{scene.funfact}</p>
       </div>
-    </div>
-  );
-}
+    </main>
+
+    <footer className="flex justify-between items-center p-4 bg-neutral-200">
+      <button onClick={() => setSceneIndex(Math.max(sceneIndex - 1, 0))} disabled={sceneIndex === 0} className="px-4 py-2 bg-gray-300 rounded">⬅️ Zurück</button>
+
+      <select value={sceneIndex} onChange={(e) => setSceneIndex(parseInt(e.target.value))} className="border px-3 py-2 rounded">
+        {lessons.map((s, idx) => (
+          <option key={s.id} value={idx}>{s.id}. {s.title}</option>
+        ))}
+      </select>
+
+      <button onClick={() => setSceneIndex(Math.min(sceneIndex + 1, lessons.length - 1))} disabled={sceneIndex === lessons.length - 1} className="px-4 py-2 bg-gray-300 rounded">Weiter ➡️</button>
+    </footer>
+  </div>
+);
