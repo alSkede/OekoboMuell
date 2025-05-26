@@ -4,7 +4,7 @@ export default function StartPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-yellow-50 text-center p-6">
       <img
-        src="/img/title_wer_wird_muellionaer.webp"
+        src="/img/Titel_Muellionaer.png"
         alt="Titel: Wer wird Müllionär?"
         className="w-full max-w-xl mx-auto mb-8 rounded shadow-lg"
       />
