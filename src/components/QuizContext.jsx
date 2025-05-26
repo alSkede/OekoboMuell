@@ -2,8 +2,15 @@ import { createContext, useContext, useState } from "react";
 
 const QuizContext = createContext();
 
+useEffect(() => {
+  localStorage.setItem("quizResults", JSON.stringify(results));
+}, [results]);
+
 export const QuizProvider = ({ children }) => {
-  const [results, setResults] = useState({}); // { sceneId: {userAnswer, correct} }
+  const [results, setResults] = useState(() => {
+    const stored = localStorage.getItem("quizResults");
+    return stored ? JSON.parse(stored) : {};
+  });
 
   const recordAnswer = (sceneId, userAnswer, correctIndex) => {
     const isCorrect = userAnswer === correctIndex;
