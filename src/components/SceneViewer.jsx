@@ -3,6 +3,8 @@ import lessons from "../data/lessons";
 import Scene1 from "./scenes/Scene1";
 import Scene2 from "./scenes/Scene2";
 import Scene3 from "./scenes/Scene3";
+import CertificatePage from "./CertificatePage";
+import { useQuiz } from "../QuizContext";
 
 const SceneComponents = { Scene1, Scene2, Scene3 };
 
@@ -10,8 +12,10 @@ export default function SceneViewer() {
   const [sceneIndex, setSceneIndex] = useState(0);
   const scene = lessons[sceneIndex];
   const SceneComponent = SceneComponents[`Scene${scene.id}`];
-
   const audioRef = useRef(null);
+
+  const { results } = useQuiz();
+  const hasCompletedScene20 = scene.id === 20 && results[20]?.userAnswer !== undefined;
 
   useEffect(() => {
     if (audioRef.current) {
@@ -20,9 +24,12 @@ export default function SceneViewer() {
     }
   }, [scene.id]);
 
+  if (hasCompletedScene20) {
+    return <CertificatePage />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-neutral-100 text-gray-800">
-      
       {/* Header */}
       <header className="p-4 text-center text-3xl font-bold bg-green-700 text-white shadow-md">
         {scene.title}
@@ -30,7 +37,6 @@ export default function SceneViewer() {
 
       {/* Main Grid */}
       <main className="flex-grow grid grid-cols-2 gap-6 p-8">
-        
         {/* Video Panel */}
         <div className="flex flex-col items-center justify-center bg-white shadow rounded-lg p-6">
           <video
@@ -47,7 +53,6 @@ export default function SceneViewer() {
         <div className="flex flex-col gap-4 bg-white shadow rounded-lg p-6">
           <SceneComponent />
         </div>
-
       </main>
 
       {/* Footer Navigation */}
@@ -87,7 +92,6 @@ export default function SceneViewer() {
         src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
         preload="auto"
       />
-
     </div>
   );
 }
