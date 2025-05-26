@@ -7,7 +7,7 @@
   knowledge: "Das Ökomobil ist ein Naturschutzlabor auf Rädern! Es besucht Kindergärten, Schulen und Kommunen im Regierungsbezirk Tübingen. Und heute bist DU dran! Bist du bereit für 20 Seiten Müll?",
   action: "Male das Ökomobil – oder baue dir ein eigenes aus einem Schuhkarton! Die Leiterin des Ökomobils würde sich über ein Photo von deinem fertigen Kunstwerk freuen: oekomobil@rpt.bwl.de",
   quiz: {
-    question: "Wofür steht das „Öko“ in „Ökomobil“?",
+    question: "Wofür steht das Öko in Ökomobil?",
     options: ["Oktopusmobil", "Ökologisches Lernen", "Ölfahrzeug"],
     correct: 1
   },
