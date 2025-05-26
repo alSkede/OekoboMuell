@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 export default function StartPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-yellow-50 text-center p-6">
+      <img
+        src="/img/title_wer_wird_muellionaer.webp"
+        alt="Titel: Wer wird Müllionär?"
+        className="w-full max-w-xl mx-auto mb-8 rounded shadow-lg"
+      />
       <h1 className="text-4xl font-bold mb-6 text-green-700">
         Willkommen bei Trude Kühl!
       </h1>
