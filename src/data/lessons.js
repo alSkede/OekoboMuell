@@ -5,7 +5,7 @@
   visual: "/img/bild01_intro.png",
   trudeSpeech: "Steig ein und lass uns die Welt vom Müll befrei'n!",
   knowledge: "Das Ökomobil ist ein Naturschutzlabor auf Rädern! Es besucht Kindergärten, Schulen und Kommunen im Regierungsbezirk Tübingen. Und heute bist DU dran! Bist du bereit für 20 Seiten Müll?",
-  action: "Male das Ökomobil – oder baue dir ein eigenes aus einem Schuhkarton! Die Leiterin des Ökomobils würde sich über ein Photo von deinem fertigen Kunstwerk freuen: oekomobil@rpt.bwl.de ",
+  action: "Male das Ökomobil – oder baue dir ein eigenes aus einem Schuhkarton! Die Leiterin des Ökomobils würde sich über ein Photo von deinem fertigen Kunstwerk freuen: oekomobil@rpt.bwl.de",
   quiz: {
     question: "Wofür steht das „Öko“ in „Ökomobil“?",
     options: ["Oktopusmobil", "Ökologisches Lernen", "Ölfahrzeug"],
@@ -21,7 +21,7 @@
   visual: "/img/bild02_tonnenquiz.png",
   trudeSpeech: "Wer falsch trennt, wird aussortiert – und gehört ab sofort nicht mehr zu uns Kühlen. ...oder gib jetzt gut Acht!",
   knowledge: "Blaue Tonne: Papier. Gelb: Verpackungen. Braun: Bioabfall. Grau: der traurige Rest. Wer richtig trennt, spart Rohstoffe und Nerven.",
-  action: "Male oder bastle deine eigene Mülltonnenfamilie – mit Gesichtern! Chipstüten-Haare, Apfelaugen, Klopapier-Hüte – alles erlaubt. Jury: oekomobil@rpt.bwl.de  ",
+  action: "Male oder bastle deine eigene Mülltonnenfamilie – mit Gesichtern! Chipstüten-Haare, Apfelaugen, Klopapier-Hüte – alles erlaubt. Jury: oekomobil@rpt.bwl.de",
   quiz: {
     question: "Was gehört NICHT in die Gelbe Tonne?",
     options: ["Milchtüte", "Plastikspielzeug", "Joghurtbecher"],
