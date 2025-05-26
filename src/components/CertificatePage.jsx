@@ -43,6 +43,11 @@ export default function CertificatePage() {
 
         <h2 className="text-2xl font-semibold">Du bist Müllionärin!</h2>
         <p className="text-lg mt-2">Mit {score} von 20 Punkten im Trude-Quiz</p>
+        {score < 15 ? (
+            <p className="text-red-500">Vielleicht nochmal nachsortieren? 🧹</p>
+        ) : (
+            <p className="text-green-700 font-semibold">Herzlichen Glückwunsch, du hast bestanden!</p>
+        )}
         <p className="italic">– bestanden am {date} –</p>
 
         <div className="mt-6">
