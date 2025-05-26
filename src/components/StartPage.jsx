@@ -5,7 +5,7 @@ export default function StartPage() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-yellow-50 text-center p-6">
       <h1 style={{ color: "red" }}>👀 Die App läuft – aber etwas fehlt!</h1>
       <img
-        src="/img/Titel_Muellionaer.png"
+        src="/img/Titel_Muellionaer.webp"
         alt="Titel: Wer wird Müllionär?"
         className="w-full max-w-xl mx-auto mb-8 rounded shadow-lg"
       />
