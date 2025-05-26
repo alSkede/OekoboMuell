@@ -48,7 +48,7 @@ export default function SceneViewer() {
 
         {/* Content Panel */}
         <div className="flex flex-col gap-4 bg-white shadow rounded-lg p-6">
-          <SceneComponent />
+          <SceneComponent scene={scene} />
         </div>
       </main>
 
