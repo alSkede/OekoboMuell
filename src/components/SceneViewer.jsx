@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import lessons from "../data/lessons";
-import Scene1 from "./scenes/Scene1";
-import Scene2 from "./scenes/Scene2";
-import Scene3 from "./scenes/Scene3";
+import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "../QuizContext";
 
@@ -10,10 +8,9 @@ const SceneComponents = { Scene1, Scene2, Scene3 };
 
 export default function SceneViewer() {
   const [sceneIndex, setSceneIndex] = useState(0);
-  const scene = lessons[sceneIndex];
-  const SceneComponent = SceneComponents[`Scene${scene.id}`];
+  
   const audioRef = useRef(null);
-
+  const SceneComponent = GenericScene;
   const { results } = useQuiz();
   const hasCompletedScene20 = scene.id === 20 && results[20]?.userAnswer !== undefined;
 
