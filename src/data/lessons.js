@@ -540,3 +540,5 @@ const lessons = [
   funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
   }
 ];
+
+export default lessons;
