@@ -3,6 +3,7 @@ import lessons from "../data/lessons";
 import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "../QuizContext";
+import { Play, Pause, Volume2, VolumeX } from "lucide-react"; // Lucide Icons importieren
 import "./SceneViewer.css";
 
 export default function SceneViewer() {
@@ -67,7 +68,7 @@ export default function SceneViewer() {
           />
           <div className="scene-controls">
             <button onClick={toggleVideo} className="scene-button">
-              {videoPlaying ? "⏸️ Pause" : "▶️ Play"}
+              {videoPlaying ? <Pause size={24} /> : <Play size={24} />}
             </button>
           </div>
         </div>
@@ -86,7 +87,7 @@ export default function SceneViewer() {
           disabled={sceneIndex === 0}
           className="scene-button"
         >
-          ⬅️ Zurück
+          ⬅️
         </button>
 
         <select
@@ -108,11 +109,11 @@ export default function SceneViewer() {
           disabled={sceneIndex === lessons.length - 1}
           className="scene-button"
         >
-          Weiter ➡️
+          ➡️
         </button>
 
         <button onClick={toggleAudioMute} className="scene-button">
-          {audioMuted ? "🔇 Mute" : "🔊 Unmute"}
+          {audioMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
         </button>
       </footer>
 
