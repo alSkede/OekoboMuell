@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const QuizContext = createContext();
 
@@ -10,7 +10,7 @@ export const QuizProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("quizResults", JSON.stringify(results));
-}, [results]);
+  }, [results]);
 
   const recordAnswer = (sceneId, userAnswer, correctIndex) => {
     const isCorrect = userAnswer === correctIndex;
@@ -23,7 +23,6 @@ export const QuizProvider = ({ children }) => {
   const getScore = () =>
     Object.values(results).filter(r => r.correct).length;
 
-
   const resetQuiz = () => {
     setResults({});
     localStorage.removeItem("quizResults");
@@ -35,4 +34,5 @@ export const QuizProvider = ({ children }) => {
     </QuizContext.Provider>
   );
 };
+
 export const useQuiz = () => useContext(QuizContext);
