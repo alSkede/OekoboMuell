@@ -3,7 +3,7 @@ import lessons from "../data/lessons";
 import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "../QuizContext";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react"; // Lucide Icons importieren
+import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import "./SceneViewer.css";
 
 export default function SceneViewer() {
@@ -17,11 +17,13 @@ export default function SceneViewer() {
 
   const [videoPlaying, setVideoPlaying] = useState(true);
   const [audioMuted, setAudioMuted] = useState(true);
+  const [volume, setVolume] = useState(0.5); // Default Volume
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch(() => {});
+      audioRef.current.volume = volume;
     }
     setVideoPlaying(true);
   }, [scene.id]);
@@ -40,6 +42,14 @@ export default function SceneViewer() {
     if (!audioRef.current) return;
     audioRef.current.muted = !audioMuted;
     setAudioMuted(!audioMuted);
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
   };
 
   if (hasCompletedScene20) {
@@ -112,9 +122,21 @@ export default function SceneViewer() {
           ➡️
         </button>
 
-        <button onClick={toggleAudioMute} className="scene-button">
-          {audioMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
-        </button>
+        {/* Audio Controls */}
+        <div className="audio-controls">
+          <button onClick={toggleAudioMute} className="scene-button">
+            {audioMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+            className="volume-slider"
+          />
+        </div>
       </footer>
 
       {/* Trude Audio */}
