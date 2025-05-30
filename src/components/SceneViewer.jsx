@@ -147,6 +147,16 @@ export default function SceneViewer() {
         muted={audioMuted}
         autoPlay
       />
+      <input
+         type="range"
+         min="0"
+         max="1"
+         step="0.01"
+         value={volume}
+         onChange={handleVolumeChange}
+         className="volume-slider"
+         title={`Lautstärke: ${(volume * 100).toFixed(0)}%`} // Tooltip mit Prozentwert
+       />
     </div>
   );
 }
