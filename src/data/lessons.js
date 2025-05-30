@@ -1,4 +1,4 @@
-const = [
+const lessons = [
   {
     id: 1,
     title: "Da kommt was auf uns zu!",
