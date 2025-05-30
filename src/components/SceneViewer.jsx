@@ -3,16 +3,15 @@ import lessons from "../data/lessons";
 import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "../QuizContext";
-
-const SceneComponents = { Scene1, Scene2, Scene3 };
+import "./SceneViewer.css"; // <- Neue CSS-Datei für Styles
 
 export default function SceneViewer() {
   const [sceneIndex, setSceneIndex] = useState(0);
-  
+  const scene = lessons[sceneIndex];
   const audioRef = useRef(null);
-  const SceneComponent = GenericScene;
   const { results } = useQuiz();
-  const hasCompletedScene20 = scene.id === 20 && results[20]?.userAnswer !== undefined;
+  const hasCompletedScene20 =
+    scene.id === 20 && results[20]?.userAnswer !== undefined;
 
   useEffect(() => {
     if (audioRef.current) {
@@ -26,18 +25,18 @@ export default function SceneViewer() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-neutral-100 text-gray-800">
+    <div className="scene-viewer">
       {/* Header */}
-      <header className="p-4 text-center text-3xl font-bold bg-green-700 text-white shadow-md">
-        {scene.title}
+      <header className="scene-header">
+        🐤 Trude Kühl
       </header>
 
-      {/* Main Grid */}
-      <main className="flex-grow grid grid-cols-2 gap-6 p-8">
+      {/* Main Content */}
+      <main className="scene-main">
         {/* Video Panel */}
-        <div className="flex flex-col items-center justify-center bg-white shadow rounded-lg p-6">
+        <div className="scene-video">
           <video
-            className="w-full h-[60vh] object-cover rounded"
+            className="scene-video-element"
             src={scene.video}
             autoPlay
             muted
@@ -47,17 +46,18 @@ export default function SceneViewer() {
         </div>
 
         {/* Content Panel */}
-        <div className="flex flex-col gap-4 bg-white shadow rounded-lg p-6">
-          <SceneComponent scene={scene} />
+        <div className="scene-content">
+          <h1 className="scene-title">{scene.title}</h1>
+          <GenericScene scene={scene} />
         </div>
       </main>
 
-      {/* Footer Navigation */}
-      <footer className="flex justify-between items-center p-4 bg-neutral-200">
+      {/* Footer */}
+      <footer className="scene-footer">
         <button
           onClick={() => setSceneIndex(Math.max(sceneIndex - 1, 0))}
           disabled={sceneIndex === 0}
-          className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded disabled:opacity-50"
+          className="scene-button"
         >
           ⬅️ Zurück
         </button>
@@ -65,7 +65,7 @@ export default function SceneViewer() {
         <select
           value={sceneIndex}
           onChange={(e) => setSceneIndex(parseInt(e.target.value))}
-          className="border px-3 py-2 rounded"
+          className="scene-select"
         >
           {lessons.map((s, idx) => (
             <option key={s.id} value={idx}>
@@ -75,9 +75,11 @@ export default function SceneViewer() {
         </select>
 
         <button
-          onClick={() => setSceneIndex(Math.min(sceneIndex + 1, lessons.length - 1))}
+          onClick={() =>
+            setSceneIndex(Math.min(sceneIndex + 1, lessons.length - 1))
+          }
           disabled={sceneIndex === lessons.length - 1}
-          className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded disabled:opacity-50"
+          className="scene-button"
         >
           Weiter ➡️
         </button>
