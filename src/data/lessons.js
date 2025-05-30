@@ -38,7 +38,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal eine Klobürste im Gelben Sack gefunden. Die gehört zu gelb obwohl sie braun war!"
-    },
+},
 
     {
     id: 3,
@@ -88,7 +88,7 @@ const lessons = [
       }
     },
     funfact: "Früher war alles besser? Nicht beim Müll. Da war einfach nur mehr Ratte pro Kilo Abfall. Wenn wir so weiter machen, brauchen wir mehr Ratten als je zuvor."
-    },
+ },
 
     {
     id: 5,
@@ -113,7 +113,7 @@ const lessons = [
         }
       },
       funfact: "Ich wollte Sushi – keinen Klebereis mit Gaffaband!"
-      },
+    },
 
     {
     id: 6,
@@ -138,7 +138,7 @@ const lessons = [
       }
     },
     funfact: "Recyclinghinweise sind wie Liebesbriefe von früher – liest sich ganz nett, landet aber trotzdem meist im Altpapier."
-    },
+  },
 
     {
     id: 7,
@@ -167,7 +167,7 @@ const lessons = [
        }
     },
     funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch."
-    },
+  },
 
     {
       id: 8,
@@ -192,7 +192,7 @@ const lessons = [
         }
       },
       funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis."
-      },
+   },
 
       {
       id: 9,
@@ -221,7 +221,7 @@ const lessons = [
           }
         },
         funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
-        },
+    },
 
       {
       id: 10,
@@ -250,7 +250,7 @@ const lessons = [
          }
        },
        funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
-       },
+    },
 
     {
        id: 11,
@@ -275,7 +275,7 @@ const lessons = [
         }
       },
       funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
-      },
+    },
 
       {
       id: 12,
@@ -304,7 +304,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen."
-    },
+  },
 
     {
       id: 13,
@@ -333,7 +333,7 @@ const lessons = [
         }
       },
       funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken."
-      },
+    },
 
     {
       id: 14,
@@ -362,7 +362,7 @@ const lessons = [
         }
       },
       funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
-      },
+    },
 
     {
       id: 15,
@@ -391,7 +391,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
-    },
+  },
 
     {
       id: 16,
@@ -420,7 +420,7 @@ const lessons = [
       }
     },
     funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
-    },
+  },
 
     {
     id: 17,
@@ -449,7 +449,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
-    },
+  },
 
     {
     id: 18,
@@ -480,7 +480,7 @@ const lessons = [
     }
   },
   funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
-  },
+ },
 
   {
     id: 19,
@@ -509,7 +509,7 @@ const lessons = [
     }
   },
   funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
-  },
+ },
 
   {
     id: 20,
@@ -538,7 +538,7 @@ const lessons = [
       }
   },
   funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
-  }
+ }
 ];
 
 export default lessons;
