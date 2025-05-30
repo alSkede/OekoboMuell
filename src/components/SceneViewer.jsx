@@ -3,22 +3,43 @@ import lessons from "../data/lessons";
 import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "../QuizContext";
-import "./SceneViewer.css"; // <- Neue CSS-Datei für Styles
+import "./SceneViewer.css";
 
 export default function SceneViewer() {
   const [sceneIndex, setSceneIndex] = useState(0);
   const scene = lessons[sceneIndex];
   const audioRef = useRef(null);
+  const videoRef = useRef(null);
   const { results } = useQuiz();
   const hasCompletedScene20 =
     scene.id === 20 && results[20]?.userAnswer !== undefined;
+
+  const [videoPlaying, setVideoPlaying] = useState(true);
+  const [audioMuted, setAudioMuted] = useState(true);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch(() => {});
     }
+    setVideoPlaying(true);
   }, [scene.id]);
+
+  const toggleVideo = () => {
+    if (!videoRef.current) return;
+    if (videoPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play().catch(() => {});
+    }
+    setVideoPlaying(!videoPlaying);
+  };
+
+  const toggleAudioMute = () => {
+    if (!audioRef.current) return;
+    audioRef.current.muted = !audioMuted;
+    setAudioMuted(!audioMuted);
+  };
 
   if (hasCompletedScene20) {
     return <CertificatePage />;
@@ -36,6 +57,7 @@ export default function SceneViewer() {
         {/* Video Panel */}
         <div className="scene-video">
           <video
+            ref={videoRef}
             className="scene-video-element"
             src={scene.video}
             autoPlay
@@ -43,6 +65,11 @@ export default function SceneViewer() {
             loop
             playsInline
           />
+          <div className="scene-controls">
+            <button onClick={toggleVideo} className="scene-button">
+              {videoPlaying ? "⏸️ Pause" : "▶️ Play"}
+            </button>
+          </div>
         </div>
 
         {/* Content Panel */}
@@ -83,6 +110,10 @@ export default function SceneViewer() {
         >
           Weiter ➡️
         </button>
+
+        <button onClick={toggleAudioMute} className="scene-button">
+          {audioMuted ? "🔇 Mute" : "🔊 Unmute"}
+        </button>
       </footer>
 
       {/* Trude Audio */}
@@ -90,6 +121,8 @@ export default function SceneViewer() {
         ref={audioRef}
         src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
         preload="auto"
+        muted={audioMuted}
+        autoPlay
       />
     </div>
   );
