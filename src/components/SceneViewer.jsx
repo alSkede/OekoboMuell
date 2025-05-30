@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import lessons from "../data/lessons";
 import GenericScene from "./GenericScene";
 import CertificatePage from "./CertificatePage";
-import { useQuiz } from "../QuizContext";
+import { useQuiz } from "./QuizContext";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import "../styles/SceneViewer.css";
 
