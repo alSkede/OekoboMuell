@@ -12,7 +12,7 @@ const lessons = [
       options: ["Oktopusmobil", "Ökologisches Lernen", "Ölfahrzeug"],
       correct: 1
     },
-    funfact: "Trude fliegt beim Aussteigen fast in die Papiertonne – 'Ups, das war der Altpapiersprung!'"
+    funfact: "Trude fliegt beim Aussteigen fast in die Papiertonne – 'Ups, das war der Altpapiersprung!'",
   },
 
   {
@@ -37,7 +37,7 @@ const lessons = [
         correct: 1
       }
     },
-    funfact: "Trude hat mal eine Klobürste im Gelben Sack gefunden. Die gehört zu gelb obwohl sie braun war!"
+    funfact: "Trude hat mal eine Klobürste im Gelben Sack gefunden. Die gehört zu gelb obwohl sie braun war!",
 },
 
     {
@@ -62,7 +62,7 @@ const lessons = [
         correct: 0
         }
     },
-    funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
+    funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!",
     },
 
     {
@@ -87,7 +87,7 @@ const lessons = [
         correct: 0
       }
     },
-    funfact: "Früher war alles besser? Nicht beim Müll. Da war einfach nur mehr Ratte pro Kilo Abfall. Wenn wir so weiter machen, brauchen wir mehr Ratten als je zuvor."
+    funfact: "Früher war alles besser? Nicht beim Müll. Da war einfach nur mehr Ratte pro Kilo Abfall. Wenn wir so weiter machen, brauchen wir mehr Ratten als je zuvor.",
  },
 
     {
@@ -112,7 +112,7 @@ const lessons = [
         correct: 0
         }
       },
-      funfact: "Ich wollte Sushi – keinen Klebereis mit Gaffaband!"
+      funfact: "Ich wollte Sushi – keinen Klebereis mit Gaffaband!",
     },
 
     {
@@ -137,7 +137,7 @@ const lessons = [
         correct: 0
       }
     },
-    funfact: "Recyclinghinweise sind wie Liebesbriefe von früher – liest sich ganz nett, landet aber trotzdem meist im Altpapier."
+    funfact: "Recyclinghinweise sind wie Liebesbriefe von früher – liest sich ganz nett, landet aber trotzdem meist im Altpapier.",
   },
 
     {
@@ -166,7 +166,7 @@ const lessons = [
         correct: 0
        }
     },
-    funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch."
+    funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch.",
   },
 
     {
@@ -191,7 +191,7 @@ const lessons = [
         correct: 0
         }
       },
-      funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis."
+      funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis.",
    },
 
       {
@@ -220,7 +220,7 @@ const lessons = [
           correct: 0
           }
         },
-        funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
+        funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung.",
     },
 
       {
@@ -249,7 +249,7 @@ const lessons = [
          correct: 0
          }
        },
-       funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
+       funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten.",
     },
 
     {
@@ -274,7 +274,7 @@ const lessons = [
         correct: 0
         }
       },
-      funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
+      funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet.",
     },
 
       {
@@ -303,7 +303,7 @@ const lessons = [
       correct: 0
       }
     },
-    funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen."
+    funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen.",
   },
 
     {
@@ -332,7 +332,7 @@ const lessons = [
         correct: 0
         }
       },
-      funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken."
+      funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken.",
     },
 
     {
@@ -361,7 +361,7 @@ const lessons = [
         correct: 0
         }
       },
-      funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
+      funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen.",
     },
 
     {
@@ -390,7 +390,7 @@ const lessons = [
         correct: 0
       }
     },
-    funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
+    funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po.",
   },
 
     {
@@ -419,7 +419,7 @@ const lessons = [
       correct: 0
       }
     },
-    funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
+    funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen.",
   },
 
     {
@@ -448,7 +448,7 @@ const lessons = [
         correct: 0
       }
     },
-    funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
+    funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'.",
   },
 
     {
@@ -479,7 +479,7 @@ const lessons = [
       correct: 0
     }
   },
-  funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
+  funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet.",
  },
 
   {
@@ -508,7 +508,7 @@ const lessons = [
       correct: 0
     }
   },
-  funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
+  funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet.",
  },
 
 {
@@ -537,7 +537,7 @@ const lessons = [
       correct: 1
     }
   },
-  funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
+  funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können.",
 }
 ];
 
