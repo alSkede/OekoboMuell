@@ -63,7 +63,8 @@ const lessons = [
         }
     },
     funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
-    },
+    }
+  },
 
     {
     id: 4,
@@ -88,8 +89,9 @@ const lessons = [
       }
     },
     funfact: "Früher war alles besser? Nicht beim Müll. Da war einfach nur mehr Ratte pro Kilo Abfall. Wenn wir so weiter machen, brauchen wir mehr Ratten als je zuvor."
- },
-
+    }
+},
+  
     {
     id: 5,
     title: "Mikro–was?",
@@ -113,8 +115,9 @@ const lessons = [
         }
       },
       funfact: "Ich wollte Sushi – keinen Klebereis mit Gaffaband!"
-    },
-
+    }
+  },
+  
     {
     id: 6,
     title: "Recycling oder Re-lügen?",
@@ -138,6 +141,7 @@ const lessons = [
       }
     },
     funfact: "Recyclinghinweise sind wie Liebesbriefe von früher – liest sich ganz nett, landet aber trotzdem meist im Altpapier."
+    }
   },
 
     {
@@ -167,6 +171,7 @@ const lessons = [
        }
     },
     funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch."
+    }
   },
 
     {
@@ -192,8 +197,8 @@ const lessons = [
         }
       },
       funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis."
-   },
-
+    }
+  },
       {
       id: 9,
       title: "Verpackt und zugenäht",
@@ -221,8 +226,8 @@ const lessons = [
           }
         },
         funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
-    },
-
+    }
+  },
       {
       id: 10,
       title: "Müll auf Weltreise",
@@ -250,8 +255,9 @@ const lessons = [
          }
        },
        funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
-    },
-
+    }
+  },
+  
     {
        id: 11,
        title: "Mir wird heiß",
@@ -275,8 +281,9 @@ const lessons = [
         }
       },
       funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
-    },
-
+    }
+  },
+  
       {
       id: 12,
       title: "Wer macht den Dreck?",
@@ -304,8 +311,9 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen."
+    }
   },
-
+  
     {
       id: 13,
       title: "Die Müllindustrie",
@@ -333,8 +341,9 @@ const lessons = [
         }
       },
       funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken."
-    },
-
+    }
+  },
+  
     {
       id: 14,
       title: "Tierisch Müll!",
@@ -362,8 +371,9 @@ const lessons = [
         }
       },
       funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
-    },
-
+    }
+  },
+  
     {
       id: 15,
       title: "Kauf nix! Oder fast nix…",
@@ -391,8 +401,9 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
+    }
   },
-
+  
     {
       id: 16,
       title: "Trudes Top-5 Weltrettungstricks",
@@ -420,8 +431,9 @@ const lessons = [
       }
     },
     funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
+      }
   },
-
+  
     {
     id: 17,
     title: "Was kannst DU tun?",
@@ -449,6 +461,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
+      }
   },
 
     {
@@ -480,7 +493,8 @@ const lessons = [
     }
   },
   funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
- },
+  }
+},
 
   {
     id: 19,
@@ -509,8 +523,9 @@ const lessons = [
     }
   },
   funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
- },
-
+    }
+  },
+  
 {
   id: 20,
   title: "Trude winkt",
