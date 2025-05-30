@@ -275,7 +275,7 @@ const lessons = [
       }
    },
       funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
-    }
+    },
     
       {
       id: 12,
