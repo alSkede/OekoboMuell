@@ -511,34 +511,34 @@ const lessons = [
   funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
  },
 
-  {
-    id: 20,
-    title: "Trude winkt",
-    video: "/videos/scene20_abschied.mp4",
-    visual: "/img/bild20_abfahrt.png",
-    trudeSpeech: "Das war’s von mir. Ich bleib euch erhalten – irgendwo zwischen Apfelschale und Altpapier.",
-    knowledge: "Das Ökomobil zieht weiter. Doch Trudes Botschaft bleibt: Müll ist ein Zivilisationsschaden. Wer aufpasst, verändert was. Wer lacht, merkt’s sich besser.",
-    action: "Male dein eigenes Ökomobil – mit allem, was du brauchst, um die Welt ein bisschen aufzuräumen. Trude darf natürlich nicht fehlen!",
-    quiz: {
-      question: "Was bleibt, wenn Trude weiterfährt?",
+{
+  id: 20,
+  title: "Trude winkt",
+  video: "/videos/scene20_abschied.mp4",
+  visual: "/img/bild20_abfahrt.png",
+  trudeSpeech: "Das war’s von mir. Ich bleib euch erhalten – irgendwo zwischen Apfelschale und Altpapier.",
+  knowledge: "Das Ökomobil zieht weiter. Doch Trudes Botschaft bleibt: Müll ist ein Zivilisationsschaden. Wer aufpasst, verändert was. Wer lacht, merkt’s sich besser.",
+  action: "Male dein eigenes Ökomobil – mit allem, was du brauchst, um die Welt ein bisschen aufzuräumen. Trude darf natürlich nicht fehlen!",
+  quiz: {
+    question: "Was bleibt, wenn Trude weiterfährt?",
+    options: [
+      "Ein Haufen Müll",
+      "Ein leerer Parkplatz",
+      "Eine Idee in meinem Kopf"
+    ],
+    correct: 2,
+    expert: {
+      question: "Was ist die wichtigste Erkenntnis aus Trudes Tour?",
       options: [
-        "Ein Haufen Müll",
-        "Ein leerer Parkplatz",
-        "Eine Idee in meinem Kopf"
+        "Dass Müll stinkt",
+        "Dass jede und jeder was tun kann",
+        "Dass Federviecher reden können"
       ],
-      correct: 2,
-      expert: {
-        question: "Was ist die wichtigste Erkenntnis aus Trudes Tour?",
-        options: [
-          "Dass Müll stinkt",
-          "Dass jede und jeder was tun kann",
-          "Dass Federviecher reden können"
-        ],
-        correct: 1
-      }
+      correct: 1
+    }
   },
   funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
- }
+}
 ];
 
 export default lessons;
