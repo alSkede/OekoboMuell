@@ -26,7 +26,7 @@ export default function SceneViewer() {
       audioRef.current.volume = volume;
     }
     setVideoPlaying(true);
-  }, [scene.id]);
+  }, [scene.id, volume]);
 
   const toggleVideo = () => {
     if (!videoRef.current) return;
@@ -124,7 +124,11 @@ export default function SceneViewer() {
 
         {/* Audio Controls */}
         <div className="audio-controls">
-          <button onClick={toggleAudioMute} className="scene-button">
+          <button
+            onClick={toggleAudioMute}
+            className="scene-button"
+            title={audioMuted ? "Audio stummgeschaltet" : "Audio aktiviert"}
+          >
             {audioMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
           </button>
           <input
@@ -135,6 +139,7 @@ export default function SceneViewer() {
             value={volume}
             onChange={handleVolumeChange}
             className="volume-slider"
+            title={`Lautstärke: ${(volume * 100).toFixed(0)}%`}
           />
         </div>
       </footer>
@@ -147,16 +152,6 @@ export default function SceneViewer() {
         muted={audioMuted}
         autoPlay
       />
-      <input
-         type="range"
-         min="0"
-         max="1"
-         step="0.01"
-         value={volume}
-         onChange={handleVolumeChange}
-         className="volume-slider"
-         title={`Lautstärke: ${(volume * 100).toFixed(0)}%`} // Tooltip mit Prozentwert
-       />
     </div>
   );
 }
