@@ -60,11 +60,10 @@ const lessons = [
           "Es fliegt beim kleinsten Windstoß davon"
         ],
         correct: 0
-        }
+        
     },
     funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
-    }
-  },
+    },
 
     {
     id: 4,
@@ -89,8 +88,7 @@ const lessons = [
       }
     },
     funfact: "Früher war alles besser? Nicht beim Müll. Da war einfach nur mehr Ratte pro Kilo Abfall. Wenn wir so weiter machen, brauchen wir mehr Ratten als je zuvor."
-    }
-},
+    },
   
     {
     id: 5,
@@ -197,8 +195,8 @@ const lessons = [
         }
       },
       funfact: "Der Kompost lebt. Leider auch, wenn du was Falsches reinschmeißt – wie deine Schulzeugnis."
-    }
-  },
+      },
+  
       {
       id: 9,
       title: "Verpackt und zugenäht",
@@ -223,8 +221,7 @@ const lessons = [
             "Es riecht weiß und neutral"
           ],
           correct: 0
-          }
-        },
+          },
         funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
     }
   },
@@ -255,8 +252,7 @@ const lessons = [
          }
        },
        funfact: "Trude wollte mal als Gepäckstück mitreisen, um ihren Müll in Indonesien zurückzuholen – sie wurde am Zoll aufgehalten."
-    }
-  },
+       },
   
     {
        id: 11,
@@ -278,8 +274,7 @@ const lessons = [
               "Weil das CO₂ rosa eingefärbt wird"
         ],
         correct: 0
-        }
-      },
+        },
       funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
     }
   },
@@ -311,8 +306,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal bei einer Fast-Food-Kette angerufen und gefragt, ob man den Müll auch einzeln bestellen kann – ohne das Essen."
-    }
-  },
+    },
   
     {
       id: 13,
@@ -341,8 +335,7 @@ const lessons = [
         }
       },
       funfact: "Trude wollte mal ihre eigene Müllfirma gründen. Hat’s gelassen – zu wenig Dreck am Stecken."
-    }
-  },
+      },
   
     {
       id: 14,
@@ -371,8 +364,7 @@ const lessons = [
         }
       },
       funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
-    }
-  },
+      },
   
     {
       id: 15,
@@ -401,8 +393,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
-    }
-  },
+    },
   
     {
       id: 16,
@@ -493,8 +484,7 @@ const lessons = [
     }
   },
   funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
-  }
-},
+  },
 
   {
     id: 19,
