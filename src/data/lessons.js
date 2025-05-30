@@ -60,7 +60,7 @@ const lessons = [
           "Es fliegt beim kleinsten Windstoß davon"
         ],
         correct: 0
-        
+      } 
     },
     funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
     },
