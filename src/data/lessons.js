@@ -60,7 +60,7 @@ const lessons = [
           "Es fliegt beim kleinsten Windstoß davon"
         ],
         correct: 0
-      } 
+      }
     },
     funfact: "Wenn du eine Chipstüte wegwirfst, überlebt sie dich. Aber nicht dein Karma.- Wenn du richtig alt werden willst, dann komme als Atommüll wieder auf die Welt!"
     },
@@ -218,10 +218,11 @@ const lessons = [
             "Es riecht weiß und neutral"
           ],
           correct: 0
-          },
-        funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
-    }
+          }
+      },
+      funfact: "Trude hat sich einmal aus Verpackungsmüll ein Faschingskostüm gebaut. Motto: Die Rache der Blisterverpackung."
   },
+  
       {
       id: 10,
       title: "Müll auf Weltreise",
@@ -271,11 +272,11 @@ const lessons = [
               "Weil das CO₂ rosa eingefärbt wird"
         ],
         correct: 0
-        },
+      }
+   },
       funfact: "Ich bin nicht wütend. Ich hab nur die Atmosphäre eingeatmet."
     }
-  },
-  
+    
       {
       id: 12,
       title: "Wer macht den Dreck?",
@@ -358,7 +359,7 @@ const lessons = [
           "Es schwimmt besser"
         ],
         correct: 0
-        }
+        },
       },
       funfact: "Trude hat mal einer Taube ihr Pausenbbrot angeboten. Die Möwe hat davon nur das Papier gefressen."
       },
@@ -387,7 +388,7 @@ const lessons = [
           "Ein Ort, an dem Trude ihre schlechte Laune flicken lässt"
         ],
         correct: 0
-      }
+      },
     },
     funfact: "Trude hat mal eine Jeans gekauft, die schon 15 Leute getragen haben. Sie behauptet, man spürt deren Geschichten. Und ihren Po."
     },
@@ -416,7 +417,7 @@ const lessons = [
           "Weil dann alle nichts haben"
       ],
       correct: 0
-      }
+      },
     },
     funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
  },
@@ -445,7 +446,7 @@ const lessons = [
           "Nur Bio-Müll zulassen"
         ],
         correct: 0
-      }
+      },
     },
     funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
  },
@@ -476,7 +477,7 @@ const lessons = [
           "Kompostieren"
     ],
       correct: 0
-    }
+    },
   },
   funfact: "Trude hat das Müllionärs-Zertifikat einst  gefälscht – aber inzwischen ist es staatlich unbeachtet."
   },
@@ -505,7 +506,7 @@ const lessons = [
           "Hinterher aufräumen"
     ],
       correct: 0
-    }
+    },
   },
   funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
 },
@@ -534,7 +535,7 @@ const lessons = [
         "Dass Federviecher reden können"
       ],
       correct: 1
-    }
+    },
   },
   funfact: "Trude winkt mit einem Taschentuch aus Stoff. Sie sagt: Einweg ist was für Leute, die nicht tschüss sagen können."
 }
