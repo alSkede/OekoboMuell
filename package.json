@@ -1,6 +1,6 @@
 {
   "name": "oekobo-muell",
-    "version": "1.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,11 +13,5 @@
   "devDependencies": {
     "vite": "^4.4.9",
     "@vitejs/plugin-react": "^3.1.0"
-  },
-  "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
   }
 }
