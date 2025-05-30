@@ -99,3 +99,13 @@
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
+
+.scene-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.scene-controls .scene-button {
+  margin: 0 0.25rem;
+}
