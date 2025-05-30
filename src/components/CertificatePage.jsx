@@ -1,5 +1,5 @@
 
-import { useQuiz } from "../QuizContext";
+import { useQuiz } from "./QuizContext";
 import { useEffect } from "react";
 
 export default function CertificatePage() {
