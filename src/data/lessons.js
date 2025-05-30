@@ -110,10 +110,9 @@ const lessons = [
           "Es sieht lustig aus"
         ],
         correct: 0
-        }
+      }
       },
       funfact: "Ich wollte Sushi – keinen Klebereis mit Gaffaband!"
-    }
   },
   
     {
@@ -139,7 +138,6 @@ const lessons = [
       }
     },
     funfact: "Recyclinghinweise sind wie Liebesbriefe von früher – liest sich ganz nett, landet aber trotzdem meist im Altpapier."
-    }
   },
 
     {
@@ -169,8 +167,7 @@ const lessons = [
        }
     },
     funfact: "Ich hab aus ’nem alten Bahnhofs-Klodeckel eine Brotdose gebaut. Eine runde Sache, sag ich euch."
-    }
-  },
+    },
 
     {
       id: 8,
@@ -422,8 +419,7 @@ const lessons = [
       }
     },
     funfact: "Trude behauptet, ihr Federschmuck sei klimaneutral. Andere sagen, damit könne nur Trude fliegen."
-      }
-  },
+ },
   
     {
     id: 17,
@@ -452,8 +448,7 @@ const lessons = [
       }
     },
     funfact: "Trude hat mal einer Schulklasse Mülltrennung beigebracht – mit Pantomime und Apfelkernen. Seitdem heißt sie dort nur noch 'Die Tonne'."
-      }
-  },
+ },
 
     {
     id: 18,
@@ -513,8 +508,7 @@ const lessons = [
     }
   },
   funfact: "Trude hat sich als Geschenk verkleidet – mit Altpapier und Schleife. So wäre sie fast in der blauen Tonne gelandet."
-    }
-  },
+},
   
 {
   id: 20,
