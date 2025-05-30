@@ -74,10 +74,17 @@
   background-color: var(--main-color);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-button svg {
+  vertical-align: middle;
 }
 
 .scene-button:hover {
@@ -98,6 +105,18 @@
   border: 1px solid #ccc;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+  accent-color: var(--main-color);
 }
 
 .scene-controls {
