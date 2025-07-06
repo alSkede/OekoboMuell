@@ -26,10 +26,11 @@
 
 .scene-main {
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  display: block;
   padding: 1rem;
+  background: white;  /* optional */
+  border-radius: 12px;  /* optional */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* optional */
 }
 
 .scene-video {
