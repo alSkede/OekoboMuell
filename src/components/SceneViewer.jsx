@@ -1,12 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import lessons from "../data/lessons";
-import GenericScene from "./GenericScene";
+import GenericSceneLayout from "./GenericSceneLayout";
+
+import DoublePage from "./DoublePage";
 import CertificatePage from "./CertificatePage";
 import { useQuiz } from "./QuizContext";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import "../styles/SceneViewer.css";
 
 export default function SceneViewer() {
+  const [audioMuted, setAudioMuted] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const [sceneIndex, setSceneIndex] = useState(0);
   const scene = lessons[sceneIndex];
   const audioRef = useRef(null);
@@ -14,29 +18,33 @@ export default function SceneViewer() {
   const { results } = useQuiz();
   const hasCompletedScene20 =
     scene.id === 20 && results[20]?.userAnswer !== undefined;
-
-  const [videoPlaying, setVideoPlaying] = useState(true);
-  const [audioMuted, setAudioMuted] = useState(true);
   const [volume, setVolume] = useState(0.5); // Default Volume
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(() => {});
-      audioRef.current.volume = volume;
-    }
-    setVideoPlaying(true);
-  }, [scene.id, volume]);
+useEffect(() => {
+  window.speechSynthesis.cancel(); // nur sicherheitshalber abbrechen
 
-  const toggleVideo = () => {
-    if (!videoRef.current) return;
-    if (videoPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play().catch(() => {});
-    }
-    setVideoPlaying(!videoPlaying);
-  };
+  if (audioRef.current) {
+    audioRef.current.currentTime = 0;
+    audioRef.current.volume = volume;
+    audioRef.current.muted = audioMuted;
+    audioRef.current.play().catch(() => {});
+  }
+
+  if (videoRef.current) {
+    videoRef.current.volume = volume;
+  }
+}, [scene.id, audioMuted, volume]);
+
+const toggleVideo = () => {
+  if (!videoRef.current) return;
+  if (videoRef.current.paused) {
+    videoRef.current.play().catch(() => {});
+    setVideoPlaying(true);
+  } else {
+    videoRef.current.pause();
+    setVideoPlaying(false);
+  }
+};
 
   const toggleAudioMute = () => {
     if (!audioRef.current) return;
@@ -57,38 +65,16 @@ export default function SceneViewer() {
   }
 
   return (
-    <div className="scene-viewer">
-      {/* Header */}
-      <header className="scene-header">
-        🐤 Trude Kühl
-      </header>
+    <div className="min-h-screen pt-20 flex flex-col">
 
-      {/* Main Content */}
-      <main className="scene-main">
-        {/* Video Panel */}
-        <div className="scene-video">
-          <video
-            ref={videoRef}
-            className="scene-video-element"
-            src={scene.video}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          <div className="scene-controls">
-            <button onClick={toggleVideo} className="scene-button">
-              {videoPlaying ? <Pause size={24} /> : <Play size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Content Panel */}
-        <div className="scene-content">
-          <h1 className="scene-title">{scene.title}</h1>
-          <GenericScene scene={scene} />
-        </div>
-      </main>
+     {/* Main Content */}
+    <main className="scene-main flex-grow">
+      <GenericSceneLayout
+        scene={scene}
+        volume={volume}
+        audioMuted={audioMuted}
+      />
+    </main>
 
       {/* Footer */}
       <footer className="scene-footer">
@@ -150,7 +136,6 @@ export default function SceneViewer() {
         src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
         preload="auto"
         muted={audioMuted}
-        autoPlay
       />
     </div>
   );
