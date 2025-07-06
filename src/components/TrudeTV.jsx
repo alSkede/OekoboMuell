@@ -1,41 +1,53 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
-export default function TrudeTV({ videoPath }) {
-  const [videoExists, setVideoExists] = useState(false);
-  const [playVideo, setPlayVideo] = useState(false);
+export default function TrudeTV({ videoPath, volume, audioMuted, videoPlaying }) {
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    if (!videoPath) return;
-    fetch(videoPath, { method: "HEAD" })
-      .then((res) => setVideoExists(res.ok))
-      .catch(() => setVideoExists(false));
-  }, [videoPath]);
+    if (videoRef.current) {
+      videoRef.current.volume = isNaN(volume) ? 0.5 : volume;
+      videoRef.current.muted = audioMuted;
+    }
+  }, [volume, audioMuted]);
 
-  if (!videoExists) {
-    return (
-      <div className="w-64 h-40 bg-black text-white flex items-center justify-center border-4 border-gray-700 rounded">
-        🚫 Kein Video
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (videoRef.current) {
+      if (videoPlaying) {
+        videoRef.current.play().catch(() => {});
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [videoPlaying]);
 
   return (
     <div
-      className="relative w-64 h-40 border-4 border-gray-700 rounded overflow-hidden bg-black cursor-pointer"
-      onClick={() => setPlayVideo(true)}
+      style={{
+        position: "relative",
+        width: "450px",
+        height: "400px",
+        border: "4px solid #4b5563",
+        borderRadius: "12px",
+        overflow: "hidden",
+        background: "black"
+      }}
     >
-      {playVideo ? (
-        <video
-          src={videoPath}
-          autoPlay
-          controls
-          className="w-full h-full object-cover"
-        />
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center text-white text-lg bg-black bg-opacity-80">
-          ▶️ Klicken zum Abspielen
-        </div>
-      )}
+      {/* Video Panel */}
+      <video
+        ref={videoRef}
+        src={videoPath}
+        muted={audioMuted}
+        preload="metadata"
+        style={{
+          position: "absolute",
+          top: "41%",
+          left: "33%",
+          width: "46%",
+          height: "40%",
+          objectFit: "cover",
+          zIndex: 10
+        }}
+      />
     </div>
   );
 }
