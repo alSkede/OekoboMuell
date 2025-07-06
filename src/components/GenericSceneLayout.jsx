@@ -1,90 +1,196 @@
 import TrudeTV from "./TrudeTV";
-import { useEffect, useRef } from "react";
-import TrudeSpeechButton from "../TrudeSpeechButton";
+import { useEffect, useRef, useState } from "react";
+import TrudeSpeechButton from "./TrudeSpeechButton";
 import SceneQuiz from "./SceneQuiz";
+import { Play, Pause } from "lucide-react";
 
-export default function GenericSceneLayout({ scene }) {
+export default function GenericSceneLayout({ scene, volume, audioMuted }) {
+  const audioRef = useRef(null);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+
+  const toggleVideo = () => {
+    setVideoPlaying(prev => !prev);
+  };
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {});
+    }
+  }, [scene.id]);
+
   return (
-    <div className="flex flex-col items-center px-6 py-8 bg-neutral-50 rounded-xl max-w-5xl mx-auto shadow-md">
-      <h2 className="text-3xl font-bold mb-6 text-center text-emerald-800">
-        {scene.title}
-      </h2>
+    <div
+      style={{
+        width: "100%",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        background: "#fff",
+        borderRadius: "12px",
+        overflow: "hidden",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+      }}
+    >
+      <table
+        style={{
+          width: "100%",
+          tableLayout: "fixed",
+          borderCollapse: "collapse"
+        }}
+      >
+        <tbody>
+          <tr>
+            {/* Linke Spalte */}
+            <td
+              style={{
+                width: "50%",
+                verticalAlign: "top",
+                padding: "1rem"
+              }}
+            >
+              {/* Video mit PNG-Overlay */}
+              <div style={{ position: "relative", width: "100%", maxWidth: "100%", marginBottom: "1rem" }}>
+                <TrudeTV
+                  videoPath={scene.video}
+                  volume={volume}
+                  audioMuted={audioMuted}
+                  videoPlaying={videoPlaying}
+                />
+                <img
+                  src="/img/trude_tv.png"
+                  alt="Trude TV"
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "0px",
+                    width: "495px",
+                    height: "430px",
+                    pointerEvents: "none",
+                    zIndex: 20
+                  }}
+                />
+              </div>
 
-      <div className="flex flex-col md:flex-row gap-6 w-full">
-        {/* Linke Seite: Bild + Video */}
-        <div className="flex flex-col items-center md:w-1/2">
-          <img
-            src={`/img/scene${scene.id}_trude.png`}
-            alt={`Szene ${scene.id}`}
-            className="rounded shadow w-full object-contain max-h-64 mb-4"
-          />
-          <TrudeTV videoPath={scene.video} />
-        </div>
-        
-        const audioRef = useRef(null);
+              {/* Play/Pause-Button */}
+              <div style={{ marginBottom: "1rem" }}>
+                <button
+                  onClick={toggleVideo}
+                  style={{
+                    backgroundColor: "#4CAF50",
+                    color: "white",
+                    border: "none",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    fontSize: "1rem"
+                  }}
+                >
+                  {videoPlaying ? "Pause" : "Play"}
+                </button>
+              </div>
 
-         useEffect(() => {
-           if (audioRef.current) {
-             audioRef.current.play().catch(() => {
-               // Autoplay verhindert (z. B. durch Browser): ignorieren
-              });
-            }
-         }, [scene.id]);  // Spielt nur beim Szenenwechsel ab
+              {/* Expertenfrage */}
+              {scene.quiz?.expert && (
+                <div
+                  style={{
+                    backgroundColor: "#fef3c7",
+                    padding: "1rem",
+                    borderRadius: "8px",
+                    marginBottom: "1rem",
+                    fontSize: "0.9rem"
+                  }}
+                >
+                  <p><strong>🧠 Expertenfrage:</strong> {scene.quiz.expert.question}</p>
+                  <ul style={{ paddingLeft: "1rem", marginTop: "0.5rem" }}>
+                    {scene.quiz.expert.options.map((opt, i) => (
+                      <li key={i}>{opt}</li>
+                    ))}
+                  </ul>
+                  <p style={{ marginTop: "0.5rem", color: "#16a34a" }}>
+                    ✅ {scene.quiz.expert.options[scene.quiz.expert.correct]}
+                  </p>
+                </div>
+              )}
 
-        <audio
-          ref={audioRef}
-          src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
-          className="hidden"
-          autoPlay
-        />
+              {/* Quiz */}
+              {scene.quiz && <SceneQuiz scene={scene} />}
 
-        {/* Rechte Seite: Inhalte */}
-        <div className="flex flex-col md:w-1/2 gap-4">
-          <div className="bg-white border-l-4 border-rose-400 p-4 rounded">
-            <div>
-                <p className="italic">🗯️ {scene.trudeSpeech}</p>
-                <TrudeSpeechButton text={scene.trudeSpeech} />
-            </div>
-          </div>
-          
-          <div>
-            <p className="italic">🗯️ {scene.trudeSpeech}</p>
-            <audio
-              controls
-              src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
-              className="mt-2"
-            />
-          </div>
+              {/* Funfact */}
+              {scene.funfact && (
+                <div
+                  style={{
+                    fontSize: "0.9rem",
+                    fontStyle: "italic",
+                    color: "#4b5563",
+                    marginTop: "1rem"
+                  }}
+                >
+                  {scene.funfact}
+                </div>
+              )}
+            </td>
 
-          <div className="bg-green-100 p-4 rounded">
-            <p><strong>Wissenshäppchen:</strong> {scene.knowledge}</p>
-          </div>
+            {/* Rechte Spalte */}
+            <td
+              style={{
+                width: "50%",
+                verticalAlign: "top",
+                padding: "1rem"
+              }}
+            >
+              {/* Szenenbild */}
+              <img
+                src={`/img/${scene.image || `scene${scene.id}_trude.png`}`}
+                alt={`Szene ${scene.id}`}
+                style={{
+                  width: "100%",
+                  maxHeight: "500px",
+                  objectFit: "contain",
+                  marginBottom: "1rem"
+                }}
+              />
 
-          <div className="bg-blue-100 p-4 rounded">
-            <p><strong>Mitmachaktion:</strong> {scene.action}</p>
-          </div>
+              {/* Wissenshäppchen */}
+              <div
+                style={{
+                  backgroundColor: "#d1fae5",
+                  padding: "1rem",
+                  borderRadius: "8px",
+                  marginBottom: "1rem"
+                }}
+              >
+                <p><strong>Wissenshäppchen:</strong> {scene.knowledge}</p>
+              </div>
 
-          {scene.quiz && <SceneQuiz scene={scene} />}
+              {/* Mitmachaktion */}
+              <div
+                style={{
+                  backgroundColor: "#bfdbfe",
+                  padding: "1rem",
+                  borderRadius: "8px",
+                  marginBottom: "1rem"
+                }}
+              >
+                <p><strong>Mitmachaktion:</strong> {scene.action}</p>
+              </div>
 
-          {scene.quiz?.expert && (
-            <div className="bg-yellow-50 p-4 rounded text-sm">
-              <p><strong>🧠 Expertenfrage:</strong> {scene.quiz.expert.question}</p>
-              <ul className="list-disc list-inside">
-                {scene.quiz.expert.options.map((opt, i) => (
-                  <li key={i}>{opt}</li>
-                ))}
-              </ul>
-              <p className="mt-1 text-green-700">
-                ✅ {scene.quiz.expert.options[scene.quiz.expert.correct]}
-              </p>
-            </div>
-          )}
+              {/* Trude-Spricht-Button */}
+              {scene.trudeSpeech && (
+                <div style={{ marginBottom: "1rem" }}>
+                  <TrudeSpeechButton text={scene.trudeSpeech} />
+                </div>
+              )}
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-          <div className="text-sm italic text-gray-600 mt-4">
-            {scene.funfact}
-          </div>
-        </div>
-      </div>
+      {/* Audio */}
+      <audio
+        ref={audioRef}
+        src={`/audios/scene${scene.id.toString().padStart(2, "0")}_trude.mp3`}
+        className="hidden"
+        autoPlay
+      />
     </div>
   );
 }
